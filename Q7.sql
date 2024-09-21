@@ -1,0 +1,6 @@
+CREATE FUNCTION fn_BookBorrowingFrequency(@BookID INT)
+RETURNS INT
+AS
+BEGIN
+    RETURN(SELECT COUNT(*) FROM Loans WHERE BookID = @BookID);
+END;
