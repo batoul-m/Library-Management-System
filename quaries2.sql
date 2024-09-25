@@ -1,7 +1,7 @@
 WITH ActiveBorrwers AS(
     SELECT BorrowerID,Count(*) AS BorrowedBook
     FROM Loans
-    WHERE DateReturned IS NOT NULL
+    WHERE DateReturned IS NULL
     GROUP BY BorrowerID
     HAVING COUNT(*) >= 2
 
